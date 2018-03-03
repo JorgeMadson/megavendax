@@ -1,0 +1,22 @@
+<h1>Adicionar ingresso</h1>
+<%= form_for :ingresso, url: ingressos_path do |f| %>
+    <p>
+        <%= f.label :nome %><br> 
+        <%= f.text_field :nome %>
+    </p>
+    <p>
+        <%= f.label :preco %><br> 
+        <%= f.text_field :preco %>
+    </p>
+    <p>
+        <%= f.label :taxa %><br> 
+        <%= f.text_field :taxa %>
+    </p>
+    <p>
+        <%= f.label :data %><br> 
+        <%= f.text_field :data %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+    <% end %>

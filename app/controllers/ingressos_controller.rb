@@ -6,6 +6,6 @@ class IngressosController < ApplicationController
 
     end
     def create
-        #render plain: params[:ingresso].inspect
+        render plain: params[:ingresso].inspect
     end
 end
