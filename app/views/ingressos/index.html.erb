@@ -1,1 +1,7 @@
-<h1>Index Ingressos</h1>
+<h1>MegaVendax Ingressos</h1>
+<% @ingressos.each do |ingresso| %>
+  <h3><%= ingresso.nome %></h3>
+  <p><%= ingresso.data %></p>
+  <p><%= ingresso.preco %></p>
+  <p><%= ingresso.taxa %></p>
+<% end %>

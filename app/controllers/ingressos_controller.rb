@@ -1,6 +1,6 @@
 class IngressosController < ApplicationController
     def index
-
+        @ingressos = Ingresso.all
     end
     def show
         @ingresso = Ingresso.find(params[:id])
