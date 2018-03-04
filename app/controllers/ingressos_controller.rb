@@ -6,14 +6,17 @@ class IngressosController < ApplicationController
         @ingresso = Ingresso.find(params[:id])
     end
     def new
-
+        @ingresso = Ingresso.new
     end
     def create
         #render plain: params[:ingresso].inspect
         @ingresso = Ingresso.new(ingresso_params)
         
-        @ingresso.save
-        redirect_to @ingresso
+        if(@ingresso.save)
+            redirect_to @ingresso
+        else
+            render 'new'
+        end
     end
     
     #Para evitar o erro de atributo proibido, dizemos aqui quais parametros são permitidos
