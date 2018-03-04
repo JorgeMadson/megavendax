@@ -1,0 +1,27 @@
+<h1>Editar ingresso</h1>
+<%= form_for :ingresso, url: ingresso_path(@ingresso), :method=> :PATCH do |f| %>
+    <% if @ingresso.errors.any? %>
+        <% @ingresso.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
+    <p>
+        <%= f.label :nome %><br> 
+        <%= f.text_field(:nome, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :preco %><br> 
+        <%= f.text_field(:preco, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :taxa %><br> 
+        <%= f.text_field(:taxa, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.label :data %><br> 
+        <%= f.text_field(:data, {:class => 'form-control'}) %>
+    </p>
+    <p>
+        <%= f.submit({:class => 'btn btn-primary'}) %>
+    </p>
+    <% end %>

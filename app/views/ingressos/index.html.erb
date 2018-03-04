@@ -1,7 +1,10 @@
 <h1>MegaVendax Ingressos</h1>
 <% @ingressos.each do |ingresso| %>
-  <h3><%= ingresso.nome %></h3>
-  <p><%= ingresso.data %></p>
-  <p><%= ingresso.preco %></p>
-  <p><%= ingresso.taxa %></p>
+  <div class="card card-body bg-light">
+    <h3><%= ingresso.nome %></h3>
+    <p><%= ingresso.data %></p>
+    <p><%= ingresso.preco %></p>
+    <p><%= ingresso.taxa %></p>
+    <%= link_to "Veja mais informações", ingresso_path(ingresso), :class => 'btn btn-info' %>
+  </div>
 <% end %>

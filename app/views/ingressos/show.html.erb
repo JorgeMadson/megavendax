@@ -1,4 +1,8 @@
-<h2><%= @ingresso.nome %></h2>
-<p>Preço: <%= @ingresso.preco%></p>
-<p>Taxa: <%= @ingresso.taxa%></p>
-<p>Data: <%= @ingresso.data%></p>
+<div class="card card-body bg-light">
+    <h2><%= @ingresso.nome %></h2>
+    <p>Preço: <%= @ingresso.preco%></p>
+    <p>Taxa: <%= @ingresso.taxa%></p>
+    <p>Data: <%= @ingresso.data%></p>
+    <hr>
+    <%= link_to "Editar", edit_ingresso_path(@ingresso), :class => 'btn btn-warning'%>
+</div>
