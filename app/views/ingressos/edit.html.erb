@@ -1,4 +1,5 @@
 <h1>Editar ingresso</h1>
+<!-- Por algum motivo o ingressos_path aqui só funcionou no singular-->
 <%= form_for :ingresso, url: ingresso_path(@ingresso), :method=> :PATCH do |f| %>
     <% if @ingresso.errors.any? %>
         <% @ingresso.errors.full_messages.each do |msg| %>
