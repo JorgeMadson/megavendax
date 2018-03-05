@@ -22,7 +22,7 @@ class IngressosController < ApplicationController
     def edit
         @ingresso = Ingresso.find(params[:id])
     end
-    
+
     def update 
         @ingresso = Ingresso.find(params[:id])
 
@@ -31,6 +31,12 @@ class IngressosController < ApplicationController
         else
             render 'edit'
         end
+    end
+
+    def destroy
+        @ingresso = Ingresso.find(params[:id])
+        @ingresso.destroy
+        redirect_to ingressos_path
     end
     #Para evitar o erro de atributo proibido, dizemos aqui quais parametros são permitidos
     private def ingresso_params

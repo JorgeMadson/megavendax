@@ -5,4 +5,7 @@
     <p>Data: <%= @ingresso.data%></p>
     <hr>
     <%= link_to "Editar", edit_ingresso_path(@ingresso), :class => 'btn btn-warning'%>
+    <%= link_to "Apagar", ingresso_path(@ingresso), method: :delete,
+        data: {confirm: 'Tem certeza?'},
+        :class => 'btn btn-danger' %>
 </div>
