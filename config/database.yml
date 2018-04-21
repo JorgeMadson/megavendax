@@ -47,8 +47,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#
+# String pra criar o banco do azure
+#  az mysql server create --name megavendax --resource-group cloud-shell-storage-eastus --location "East US" --admin-user megavendax --admin-password M3g@vendax --sku-name GP_Gen4_2 --version 5.7
 production:
   <<: *default
-  database: megavendax_production
+  database: megavendax
   username: megavendax
-  password: <%= ENV['MEGAVENDAX_DATABASE_PASSWORD'] %>
+  password: M3g@vendax
+  #<%= ENV['MEGAVENDAX_DATABASE_PASSWORD'] %>
+
