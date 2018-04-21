@@ -52,8 +52,11 @@ test:
 #  az mysql server create --name megavendax --resource-group cloud-shell-storage-eastus --location "East US" --admin-user megavendax --admin-password M3g@vendax --sku-name GP_Gen4_2 --version 5.7
 production:
   <<: *default
+#  host: localhost
+  host: megavendax.mysql.database.azure.com
+  port: 3306
   database: megavendax
-  username: megavendax
+  username: megavendax@megavendax
   password: M3g@vendax
   #<%= ENV['MEGAVENDAX_DATABASE_PASSWORD'] %>
 
